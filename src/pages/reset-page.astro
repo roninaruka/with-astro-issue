@@ -1,0 +1,43 @@
+---
+import { ArrowLeft } from "lucide-react";
+const token = Astro.url.searchParams.get('token') || 'not found';
+---
+
+<div
+    class="min-h-screen bg-gradient-to-br from-gray-100 to-gray-200 flex flex-col"
+>
+    <header class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <nav>
+                <a
+                    href="/"
+                    class="flex items-center text-gray-600 hover:text-gray-900"
+                >
+                    <ArrowLeft className="h-5 w-5 mr-2" />
+                    Back to Home
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <article
+            class="max-w-3xl mx-auto bg-white rounded-lg shadow-md overflow-hidden"
+        >
+            <div class="px-6 py-8 sm:p-10">
+                <h1
+                    class="text-3xl font-extrabold text-gray-900 sm:text-4xl mb-4"
+                >
+                    Token
+                </h1>
+                <div class="prose prose-blue max-w-none">
+                    <p class="text-xl text-gray-500 leading-8">
+                        {token}
+                    </p>
+             
+                </div>
+            </div>
+        </article>
+    </main>
+
+</div>

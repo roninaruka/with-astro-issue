@@ -1,0 +1,17 @@
+{
+  "extends": "astro/tsconfigs/base",
+  "compilerOptions": {
+    "lib": ["es2015"],
+    "moduleResolution": "node",
+    "strict": false,
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "baseUrl": "/src",
+    "paths": {
+      "@component/*": ["component/*"],
+      "@layout/*": ["layout/*"],
+      "@dataStore/*": ["dataStore/*"],
+      "@custom/*": ["custom/*"]
+    }
+  }
+}
